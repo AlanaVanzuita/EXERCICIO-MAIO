@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class CalculoConsumoCombustivel {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Solicitar e ler tempo gasto na viagem em horas
+        System.out.print("Digite o tempo gasto na viagem (em horas): ");
+        double tempo = scanner.nextDouble();
+
+        // Solicitar e ler velocidade média durante a viagem em km/h
+        System.out.print("Digite a velocidade média durante a viagem (em km/h): ");
+        double velocidadeMedia = scanner.nextDouble();
+
+        // Calcular a distância percorrida em km
+        double distancia = tempo * velocidadeMedia;
+
+        // Calcular a quantidade de litros de combustível utilizada
+        double litrosUsados = distancia / 12.0; // Considerando que o carro faz 12 km por litro
+
+        // Exibir os resultados
+        System.out.println("\nResultados da Viagem:");
+        System.out.printf("Velocidade Média: %.2f km/h\n", velocidadeMedia);
+        System.out.printf("Tempo Gasto: %.2f horas\n", tempo);
+        System.out.printf("Distância Percorrida: %.2f km\n", distancia);
+        System.out.printf("Litros de Combustível Usados: %.2f litros\n", litrosUsados);
+
+        scanner.close();
+    }
+}
