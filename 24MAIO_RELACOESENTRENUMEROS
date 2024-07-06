@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class RelacionamentosEntreNumeros {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite o primeiro número inteiro: ");
+        int num1 = scanner.nextInt();
+
+        System.out.print("Digite o segundo número inteiro: ");
+        int num2 = scanner.nextInt();
+
+        verificarRelacionamentos(num1, num2);
+
+        scanner.close();
+    }
+
+    public static void verificarRelacionamentos(int num1, int num2) {
+        if (num1 == num2) {
+            System.out.println("Os números são iguais.");
+        } else {
+            System.out.println("Os números não são iguais.");
+
+            if (num1 > num2) {
+                System.out.printf("O primeiro número (%d) é maior que o segundo número (%d).\n", num1, num2);
+            } else {
+                System.out.printf("O primeiro número (%d) é menor que o segundo número (%d).\n", num1, num2);
+            }
+
+            if (num1 >= num2) {
+                System.out.printf("O primeiro número (%d) é maior ou igual ao segundo número (%d).\n", num1, num2);
+            } else {
+                System.out.printf("O primeiro número (%d) é menor ou igual ao segundo número (%d).\n", num1, num2);
+            }
+        }
+    }
+}
